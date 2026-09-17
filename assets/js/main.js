@@ -1,59 +1,95 @@
-/* Diogo Maia — CV behaviour. Vanilla JS, no dependencies. */
+/* Diogo Maia — site behaviour. Vanilla JS, no dependencies. */
 (function () {
   'use strict';
 
   var root = document.documentElement;
-  var STORAGE_KEY = 'dm-theme';
+  var KEY = 'dm-theme';
 
-  /* ---- Theme: stored preference, falling back to the OS setting ---- */
-  function applyTheme(theme) {
+  /* ---- Theme: stored choice, otherwise follow the OS ---- */
+  function apply(theme) {
     root.setAttribute('data-theme', theme);
     var meta = document.querySelector('meta[name="theme-color"]');
-    if (meta) meta.setAttribute('content', theme === 'dark' ? '#070a11' : '#f1f4f9');
+    if (meta) meta.setAttribute('content', theme === 'light' ? '#ffffff' : '#080b12');
   }
 
   var stored = null;
-  try { stored = localStorage.getItem(STORAGE_KEY); } catch (e) {}
-  var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  applyTheme(stored || (prefersDark ? 'dark' : 'light'));
+  try { stored = localStorage.getItem(KEY); } catch (e) {}
+  apply(stored || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'));
 
-  var themeToggle = document.getElementById('themeToggle');
-  if (themeToggle) {
-    themeToggle.addEventListener('click', function () {
-      var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-      applyTheme(next);
-      try { localStorage.setItem(STORAGE_KEY, next); } catch (e) {}
+  var toggle = document.getElementById('themeToggle');
+  if (toggle) {
+    toggle.addEventListener('click', function () {
+      var next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+      apply(next);
+      try { localStorage.setItem(KEY, next); } catch (e) {}
     });
   }
 
-  /* ---- Print / save as PDF ---- */
-  var printBtn = document.getElementById('printBtn');
-  if (printBtn) {
-    printBtn.addEventListener('click', function () { window.print(); });
-  }
-
-  /* ---- Toolbar separator once the sheet scrolls under it ---- */
-  var toolbar = document.querySelector('.toolbar');
-  function onScroll() {
-    if (toolbar) toolbar.classList.toggle('scrolled', window.scrollY > 8);
-  }
+  /* ---- Nav background once the page scrolls ---- */
+  var nav = document.getElementById('nav');
+  function onScroll() { if (nav) nav.classList.toggle('stuck', window.scrollY > 12); }
   onScroll();
   window.addEventListener('scroll', onScroll, { passive: true });
 
-  /* ---- Reveal blocks as they enter the viewport ---- */
-  var blocks = document.querySelectorAll('.page > *, .layout .block');
+  /* ---- Mobile menu ---- */
+  var menuBtn = document.getElementById('menuBtn');
+  var links = document.getElementById('navLinks');
+
+  function closeMenu() {
+    if (!links || !menuBtn) return;
+    links.classList.remove('open');
+    menuBtn.setAttribute('aria-expanded', 'false');
+    menuBtn.setAttribute('aria-label', 'Open menu');
+  }
+
+  if (menuBtn && links) {
+    menuBtn.addEventListener('click', function () {
+      var open = links.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', String(open));
+      menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    });
+    links.addEventListener('click', function (e) { if (e.target.tagName === 'A') closeMenu(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeMenu(); });
+  }
+
+  /* ---- Reveal on scroll ---- */
+  var items = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window) {
-    var observer = new IntersectionObserver(function (entries) {
+    var revealer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (!entry.isIntersecting) return;
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
+        entry.target.classList.add('seen');
+        revealer.unobserve(entry.target);
       });
-    }, { threshold: 0.05, rootMargin: '0px 0px -40px 0px' });
+    }, { threshold: 0.08, rootMargin: '0px 0px -60px 0px' });
 
-    blocks.forEach(function (el) {
-      el.classList.add('reveal');
-      observer.observe(el);
+    items.forEach(function (el, i) {
+      el.style.transitionDelay = Math.min(i % 3, 2) * 80 + 'ms';
+      revealer.observe(el);
     });
+  } else {
+    items.forEach(function (el) { el.classList.add('seen'); });
   }
+
+  /* ---- Highlight the section in view ---- */
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('.nav-links a[href^="#"]'));
+  var sections = navLinks
+    .map(function (a) { return document.querySelector(a.getAttribute('href')); })
+    .filter(Boolean);
+
+  if ('IntersectionObserver' in window && sections.length) {
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        navLinks.forEach(function (a) {
+          a.classList.toggle('on', a.getAttribute('href') === '#' + entry.target.id);
+        });
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    sections.forEach(function (s) { spy.observe(s); });
+  }
+
+  /* ---- Footer year ---- */
+  var year = document.getElementById('year');
+  if (year) year.textContent = String(new Date().getFullYear());
 })();
