@@ -576,7 +576,7 @@ svg.filled { fill: currentColor; stroke: none; }
 }
 
 /* ---------- Skills ---------- */
-.skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; align-items: start; }
 .skill-card {
   padding: 26px;
   border: 1px solid var(--border);
@@ -593,17 +593,25 @@ svg.filled { fill: currentColor; stroke: none; }
   font-weight: 700;
   margin-bottom: 18px;
 }
-.skill-card h3 span {
+.skill-card h3 .s-icon {
   display: grid;
   place-items: center;
-  width: 30px; height: 30px;
+  width: 32px; height: 32px;
   flex: none;
   border-radius: 9px;
   background: var(--accent-soft);
   color: var(--accent);
-  font-family: var(--mono);
-  font-size: .8rem;
 }
+.skill-card h3 .s-icon svg { width: 17px; height: 17px; stroke-width: 1.6; }
+
+/* Practices sit apart from the tool cards: different kind of thing. */
+.ways {
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border);
+}
+.ways .col-title { border-bottom: 0; padding-bottom: 0; margin-bottom: 16px; }
+.ways .chips { margin-top: 0; }
 
 /* ---------- Domains ---------- */
 .domain-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
