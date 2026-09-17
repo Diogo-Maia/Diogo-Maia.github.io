@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Diogo Maia — Lead Software Engineer</title>
-<meta name="description" content="Diogo Maia — Lead Software Engineer based in Portugal. .NET and C# backend systems, microservices, Domain-Driven Design and software architecture for enterprise platforms." />
+<meta name="description" content="Curriculum vitae of Diogo Maia — Lead Software Engineer in Portugal. .NET and C# backend systems, microservices, Domain-Driven Design and software architecture for enterprise platforms." />
 <meta name="author" content="Diogo Maia" />
-<meta name="theme-color" content="#0b0f14" />
+<meta name="theme-color" content="#f1f4f9" />
 <link rel="canonical" href="https://diogo-maia.github.io/" />
 
-<meta property="og:type" content="website" />
+<meta property="og:type" content="profile" />
 <meta property="og:url" content="https://diogo-maia.github.io/" />
 <meta property="og:title" content="Diogo Maia — Lead Software Engineer" />
 <meta property="og:description" content=".NET &amp; C# · Microservices · DDD · Backend Systems · Software Architecture" />
@@ -19,7 +19,7 @@
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="assets/css/style.css" />
 
 <script type="application/ld+json">
@@ -28,7 +28,7 @@
   "@type": "Person",
   "name": "Diogo Maia",
   "jobTitle": "Lead Software Engineer",
-  "address": { "@type": "PostalAddress", "addressCountry": "PT" },
+  "address": { "@type": "PostalAddress", "addressLocality": "Lisbon", "addressCountry": "PT" },
   "url": "https://diogo-maia.github.io/",
   "sameAs": [
     "https://github.com/Diogo-Maia",
@@ -39,583 +39,386 @@
 </script>
 </head>
 <body>
-<a class="skip-link" href="#main">Skip to content</a>
+<a class="skip-link" href="#cv">Skip to content</a>
 
-<!-- ================= HEADER ================= -->
-<header class="site-header" id="siteHeader">
-  <div class="wrap header-inner">
-    <a class="brand" href="#top" aria-label="Diogo Maia — home">
-      <span class="brand-mark" aria-hidden="true">DM</span>
-      <span class="brand-text">
-        <strong>Diogo Maia</strong>
-        <small>Lead Software Engineer</small>
-      </span>
-    </a>
-
-    <nav class="nav" id="nav" aria-label="Primary">
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#skills">Skills</a>
-      <a href="#domains">Domains</a>
-      <a href="#education">Education</a>
-      <a href="#contact">Contact</a>
-    </nav>
-
-    <div class="header-actions">
-      <button class="icon-btn" id="themeToggle" type="button" aria-label="Switch colour theme" title="Switch colour theme">
+<!-- ============ TOOLBAR (screen only) ============ -->
+<div class="toolbar">
+  <div class="toolbar-inner">
+    <span class="toolbar-brand">
+      <span class="mono-mark" aria-hidden="true">DM</span>
+      <span class="toolbar-label">Curriculum Vitae</span>
+    </span>
+    <div class="toolbar-actions">
+      <button class="tool-btn" id="themeToggle" type="button" aria-label="Switch colour theme" title="Switch colour theme">
         <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.6M12 18.9v2.6M21.5 12h-2.6M5.1 12H2.5M18.7 5.3l-1.8 1.8M7.1 16.9l-1.8 1.8M18.7 18.7l-1.8-1.8M7.1 7.1 5.3 5.3"/></svg>
         <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.2A8.6 8.6 0 0 1 9.8 3.5a8.6 8.6 0 1 0 10.7 10.7Z"/></svg>
+        <span class="sr-only">Toggle theme</span>
       </button>
-      <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <button class="tool-btn primary" id="printBtn" type="button">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 8V3h10v5M7 18H5a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2"/><path d="M7 14h10v7H7z"/></svg>
+        <span class="btn-label">Save as PDF</span>
       </button>
     </div>
   </div>
-</header>
+</div>
 
-<main id="main">
-<span id="top"></span>
+<!-- ============ THE SHEET ============ -->
+<article class="page" id="cv">
 
-<!-- ================= HERO ================= -->
-<section class="hero">
-  <div class="hero-glow" aria-hidden="true"></div>
-  <div class="wrap hero-inner">
-    <div class="hero-copy">
-      <p class="eyebrow"><span class="dot" aria-hidden="true"></span> Lisbon, Portugal · Hexa Consulting</p>
-      <h1>Lead Software Engineer<br /><span class="grad">building backend systems that last.</span></h1>
-      <p class="lede">
-        I design and develop <strong>.NET</strong> applications, backend services and enterprise software —
-        from telecommunications network planning to procurement platforms used across Europe.
-        Microservices, Domain-Driven Design and architecture that stays maintainable as it grows.
-      </p>
-
-      <div class="cta-row">
-        <a class="btn btn-primary" href="#contact">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg>
-          Get in touch
-        </a>
-        <a class="btn btn-ghost" href="#experience">
-          View experience
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
-        <!-- CV download: drop an up-to-date PDF in assets/files/ and uncomment this button.
-        <a class="btn btn-ghost" href="assets/files/Resume-Diogo-Maia.pdf" download>
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 11l5 5 5-5M5 21h14"/></svg>
-          Download CV
-        </a>
-        -->
+  <!-- ---- Masthead ---- -->
+  <header class="masthead">
+    <div class="identity">
+      <div class="avatar" aria-hidden="true">DM</div>
+      <div class="identity-text">
+        <h1>Diogo Maia</h1>
+        <p class="role">Lead Software Engineer</p>
+        <p class="specialism">.NET &amp; C# · Microservices · DDD · Backend Systems · Software Architecture</p>
       </div>
-
-      <ul class="hero-stats">
-        <li><strong>4+</strong><span>years in enterprise .NET</span></li>
-        <li><strong>6</strong><span>industries delivered for</span></li>
-        <li><strong>2</strong><span>countries — PT &amp; LU</span></li>
-      </ul>
     </div>
 
-    <aside class="hero-card" aria-label="Profile summary">
-      <div class="card-top">
-        <div class="monogram" aria-hidden="true">DM</div>
-        <div>
-          <h2>Diogo Maia</h2>
-          <p>Lead Software Engineer</p>
-        </div>
-      </div>
-      <dl class="card-meta">
-        <div><dt>Currently</dt><dd>Vodafone <span class="via">via Hexa Consulting</span></dd></div>
-        <div><dt>Focus</dt><dd>Backend · Distributed systems · Architecture</dd></div>
-        <div><dt>Core stack</dt><dd>C# · .NET · ASP.NET Core · SQL</dd></div>
-        <div><dt>Languages</dt><dd>Portuguese (native) · English (professional)</dd></div>
-      </dl>
-      <div class="card-links">
+    <ul class="contact">
+      <li>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5.5-8 12-8 12s-8-6.5-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span>Lisbon, Portugal</span>
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9h5M7 13h10M7 17h7"/></svg>
+        <span>Hexa Consulting <span class="soft">— at Vodafone</span></span>
+      </li>
+      <li>
         <a href="https://www.linkedin.com/in/diogo-maia-63551a196/" target="_blank" rel="noopener noreferrer">
           <svg viewBox="0 0 24 24" class="filled" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.6 4.78 6V21h-4v-5.5c0-1.3-.02-3-1.85-3-1.86 0-2.14 1.43-2.14 2.9V21H9z"/></svg>
-          LinkedIn
+          <span>linkedin.com/in/diogo-maia</span>
         </a>
+      </li>
+      <li>
         <a href="https://github.com/Diogo-Maia" target="_blank" rel="noopener noreferrer">
           <svg viewBox="0 0 24 24" class="filled" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48l-.01-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.36 1.09 2.94.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03a9.5 9.5 0 0 1 5 0c1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.94.36.31.68.92.68 1.86l-.01 2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
-          GitHub
+          <span>github.com/Diogo-Maia</span>
         </a>
-      </div>
+      </li>
+    </ul>
+  </header>
+
+  <!-- ---- Profile ---- -->
+  <section class="profile">
+    <h2 class="rule-heading">Profile</h2>
+    <p>
+      Lead Software Engineer focused on designing and developing .NET applications, backend systems and
+      enterprise software. Experience spans telecommunications, public infrastructure, procurement, insurance
+      and international organisations, working with both modern and legacy .NET ecosystems. Comfortable across
+      microservices, Domain-Driven Design, REST APIs and SQL databases, alongside containers and CI/CD —
+      with a full-stack background in React and TypeScript. Particularly interested in backend engineering,
+      distributed systems, software architecture and system integration.
+    </p>
+  </section>
+
+  <div class="layout">
+
+    <!-- ================= SIDEBAR ================= -->
+    <aside class="sidebar">
+
+      <section class="block">
+        <h2 class="rule-heading">Details</h2>
+        <dl class="detail-list">
+          <div><dt>Experience</dt><dd>4+ years, enterprise .NET</dd></div>
+          <div><dt>Based in</dt><dd>Lisbon, Portugal</dd></div>
+          <div><dt>Worked in</dt><dd>Portugal &amp; Luxembourg</dd></div>
+          <div><dt>Languages</dt><dd>Portuguese (native)<br />English (professional)</dd></div>
+        </dl>
+      </section>
+
+      <section class="block">
+        <h2 class="rule-heading">Languages &amp; runtime</h2>
+        <ul class="tags">
+          <li class="key">C#</li><li class="key">SQL</li><li>TypeScript</li><li>JavaScript</li><li>Python</li>
+        </ul>
+      </section>
+
+      <section class="block">
+        <h2 class="rule-heading">Backend &amp; APIs</h2>
+        <ul class="tags">
+          <li class="key">.NET / .NET Core</li><li class="key">ASP.NET Core</li><li>.NET Framework</li><li>ASP.NET MVC</li><li>REST APIs</li><li>RabbitMQ</li><li>Background services</li>
+        </ul>
+      </section>
+
+      <section class="block">
+        <h2 class="rule-heading">Architecture</h2>
+        <ul class="tags">
+          <li class="key">Microservices</li><li class="key">Domain-Driven Design</li><li>Clean Architecture</li><li>System integration</li><li>Legacy modernisation</li>
+        </ul>
+      </section>
+
+      <section class="block">
+        <h2 class="rule-heading">Data</h2>
+        <ul class="tags">
+          <li class="key">SQL Server</li><li class="key">MySQL</li><li>Oracle</li><li>EF Core</li><li>Dapper</li>
+        </ul>
+      </section>
+
+      <section class="block">
+        <h2 class="rule-heading">Delivery &amp; tooling</h2>
+        <ul class="tags">
+          <li class="key">Docker</li><li class="key">Kubernetes</li><li>GitHub Actions</li><li>Azure DevOps</li><li>Git</li><li>xUnit</li><li>CI/CD</li>
+        </ul>
+      </section>
+
+      <section class="block">
+        <h2 class="rule-heading">Frontend</h2>
+        <ul class="tags">
+          <li class="key">React</li><li class="key">Redux</li><li>Knockout.js</li><li>HTML &amp; CSS</li>
+        </ul>
+      </section>
+
+      <section class="block">
+        <h2 class="rule-heading">Ways of working</h2>
+        <ul class="tags subtle">
+          <li>Technical leadership</li><li>Code review</li><li>Mentoring</li><li>Estimation</li><li>Agile / Scrum</li><li>Stakeholder communication</li>
+        </ul>
+      </section>
+
+      <section class="block">
+        <h2 class="rule-heading">Certifications</h2>
+        <ul class="mini-list">
+          <li>
+            <p class="mini-title">Data Science Engineering</p>
+            <p class="mini-meta">Instituto Superior Técnico · Mar 2022</p>
+          </li>
+          <li>
+            <p class="mini-title">ASP.NET MVC Core</p>
+            <p class="mini-meta">Rumos · Jan 2022</p>
+          </li>
+        </ul>
+      </section>
+
     </aside>
+
+    <!-- ================= MAIN ================= -->
+    <main class="main">
+
+      <!-- ---- Experience ---- -->
+      <section class="block">
+        <h2 class="rule-heading">Experience</h2>
+
+        <ol class="timeline">
+          <li class="job current">
+            <div class="job-head">
+              <div>
+                <h3>Lead Software Engineer</h3>
+                <p class="job-meta"><span class="client">Vodafone</span> · Hexa Consulting <span class="tenure">(since Aug 2025)</span> · Lisbon, Portugal · Hybrid</p>
+              </div>
+              <p class="job-date"><span class="badge-now">Current</span> Dec 2025 — Present</p>
+            </div>
+            <p class="job-summary">
+              Enterprise telecommunications network planning platform, with responsibility across application
+              development, integrations, architecture and software delivery.
+            </p>
+            <ul class="job-points">
+              <li>Design and evolve .NET backend services and APIs using C# and .NET.</li>
+              <li>Apply DDD and maintainable architecture patterns to complex telecommunications domains.</li>
+              <li>Design integrations and asynchronous workflows using REST APIs, RabbitMQ and background services.</li>
+              <li>Work across persistence and data-access layers using MySQL, EF Core and Dapper.</li>
+              <li>Support architectural and technical decisions across interconnected services and applications.</li>
+              <li>Build and maintain containerised workloads using Docker and Kubernetes.</li>
+              <li>Develop CI/CD workflows with GitHub Actions and Azure DevOps across development, staging and production.</li>
+              <li>Contribute to engineering modernisation, including source-control and CI/CD migration from Azure DevOps to GitHub.</li>
+              <li>Diagnose and resolve issues across application, database, messaging and infrastructure layers.</li>
+            </ul>
+            <ul class="tags inline">
+              <li>C#</li><li>.NET</li><li>DDD</li><li>RabbitMQ</li><li>EF Core</li><li>Dapper</li><li>MySQL</li><li>Docker</li><li>Kubernetes</li><li>GitHub Actions</li>
+            </ul>
+          </li>
+
+          <li class="job">
+            <div class="job-head">
+              <div>
+                <h3>Software Engineer</h3>
+                <p class="job-meta"><span class="client">NATO Support and Procurement Agency</span> · Edda Luxembourg &amp; Sogeti Luxembourg · Luxembourg</p>
+              </div>
+              <p class="job-date">Jul 2024 — Jun 2025</p>
+            </div>
+            <p class="job-summary">
+              Full-stack engineer on an internal NSPA enterprise platform, maintaining and extending an
+              existing .NET application.
+            </p>
+            <ul class="job-points">
+              <li>Developed backend and frontend functionality using C#, .NET Framework, ASP.NET MVC, TypeScript and Knockout.js.</li>
+              <li>Delivered new features, bug fixes and database changes.</li>
+              <li>Contributed to performance, security, reliability and refactoring improvements.</li>
+              <li>Participated in technical decisions, estimations and code reviews.</li>
+              <li>Worked directly with testers and business analysts throughout the development lifecycle.</li>
+              <li>Used Azure DevOps for source control and development workflows.</li>
+            </ul>
+            <ul class="tags inline">
+              <li>C#</li><li>.NET Framework</li><li>ASP.NET MVC</li><li>TypeScript</li><li>Knockout.js</li><li>Azure DevOps</li>
+            </ul>
+          </li>
+
+          <li class="job">
+            <div class="job-head">
+              <div>
+                <h3>Software Engineer</h3>
+                <p class="job-meta"><span class="client">PwC</span> · IT People Innovation · Portugal</p>
+              </div>
+              <p class="job-date">Jul 2023 — Aug 2024</p>
+            </div>
+            <p class="job-summary">
+              Full-stack developer on a comprehensive purchasing platform designed to streamline and optimise
+              procurement processes.
+            </p>
+            <ul class="job-points">
+              <li>Built a centralised hub allowing the client to communicate purchasing needs to multiple suppliers simultaneously.</li>
+              <li>Implemented offer reception and evaluation flows, plus order management from initiation to delivery.</li>
+              <li>Delivered features end to end with React on the frontend and .NET services behind it.</li>
+            </ul>
+            <ul class="tags inline">
+              <li>C#</li><li>.NET</li><li>React.js</li><li>REST APIs</li><li>Agile</li>
+            </ul>
+          </li>
+
+          <li class="job">
+            <div class="job-head">
+              <div>
+                <h3>Software Engineer</h3>
+                <p class="job-meta"><span class="client">REN</span> · Capgemini · Lisbon, Portugal · Remote</p>
+              </div>
+              <p class="job-date">Jan 2023 — Jun 2023</p>
+            </div>
+            <p class="job-summary">
+              Full-stack developer on a custom platform for managing Portugal's national gas network, built
+              from the ground up.
+            </p>
+            <ul class="job-points">
+              <li>Developed the platform with .NET 6 MVC and Web API, backed by Oracle.</li>
+              <li>Delivered tooling to monitor and manage gas network performance across the country.</li>
+              <li>Worked under Agile methodologies with Azure DevOps Server.</li>
+            </ul>
+            <ul class="tags inline">
+              <li>.NET 6</li><li>ASP.NET Web API</li><li>MVC</li><li>Oracle</li><li>Azure DevOps</li>
+            </ul>
+          </li>
+
+          <li class="job">
+            <div class="job-head">
+              <div>
+                <h3>Software Developer</h3>
+                <p class="job-meta"><span class="client">Vortal</span> · NEX T Engineering · Lisbon, Portugal · Hybrid</p>
+              </div>
+              <p class="job-date">Apr 2022 — Dec 2022</p>
+            </div>
+            <p class="job-summary">
+              Development and ongoing maintenance of an eTendering platform serving companies worldwide,
+              including the Portuguese government.
+            </p>
+            <ul class="job-points">
+              <li>Worked across a .NET Framework backend with React and Redux on the frontend.</li>
+              <li>Built and maintained features on SQL Server, with xUnit for unit testing.</li>
+              <li>Contributed to a platform that changes how procurement and tendering are conducted online.</li>
+            </ul>
+            <ul class="tags inline">
+              <li>.NET Framework</li><li>React</li><li>Redux</li><li>SQL Server</li><li>xUnit</li><li>Azure DevOps</li>
+            </ul>
+          </li>
+        </ol>
+      </section>
+
+    </main>
   </div>
 
-  <div class="marquee" aria-hidden="true">
-    <div class="marquee-track">
-      <span>C#</span><span>.NET</span><span>ASP.NET Core</span><span>Microservices</span><span>Domain-Driven Design</span><span>REST APIs</span><span>RabbitMQ</span><span>EF Core</span><span>Dapper</span><span>SQL Server</span><span>MySQL</span><span>Oracle</span><span>Docker</span><span>Kubernetes</span><span>GitHub Actions</span><span>React</span><span>TypeScript</span>
-      <span>C#</span><span>.NET</span><span>ASP.NET Core</span><span>Microservices</span><span>Domain-Driven Design</span><span>REST APIs</span><span>RabbitMQ</span><span>EF Core</span><span>Dapper</span><span>SQL Server</span><span>MySQL</span><span>Oracle</span><span>Docker</span><span>Kubernetes</span><span>GitHub Actions</span><span>React</span><span>TypeScript</span>
-    </div>
-  </div>
-</section>
+  <div class="tail">
 
-<!-- ================= ABOUT ================= -->
-<section id="about" class="section">
-  <div class="wrap">
-    <header class="section-head reveal">
-      <p class="kicker">01 — About</p>
-      <h2>Engineering for systems that have to keep running.</h2>
-    </header>
-
-    <div class="about-grid">
-      <div class="about-text reveal">
-        <p>
-          I'm a Lead Software Engineer focused on designing and developing .NET applications, backend systems
-          and enterprise software. My professional experience spans telecommunications, public infrastructure,
-          procurement, insurance and international organisations — working with both modern and legacy
-          .NET ecosystems.
+      <!-- ---- Selected work ---- -->
+      <section class="block">
+        <h2 class="rule-heading">Selected work</h2>
+        <p class="block-note">
+          Most of this work lives behind corporate logins, so there is no public demo — but this is the kind
+          of system it is.
         </p>
-        <p>
-          Day to day that means C#, .NET Core, ASP.NET, microservices, Domain-Driven Design, REST APIs and SQL
-          databases, alongside modern delivery practices — containers, CI/CD and automated pipelines. My background
-          also includes full-stack development with React and TypeScript, which helps when a backend decision has to
-          survive contact with a real UI.
-        </p>
-        <p>
-          Throughout my career I've worked on large-scale, business-critical platforms: procurement and tendering
-          systems, infrastructure management and telecommunications applications. I'm particularly interested in
-          backend engineering, distributed systems, software architecture, system integration and building
-          maintainable applications that can evolve over time.
-        </p>
-      </div>
-
-      <ul class="principles reveal">
-        <li>
-          <span class="p-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h10M4 17h7"/></svg>
-          </span>
-          <div><h3>Domain first</h3><p>Model the business before the framework. DDD keeps complex domains readable years later.</p></div>
-        </li>
-        <li>
-          <span class="p-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18"/><circle cx="12" cy="12" r="9"/></svg>
-          </span>
-          <div><h3>Integration by design</h3><p>Services rarely live alone. Clear contracts, async messaging and sane failure modes.</p></div>
-        </li>
-        <li>
-          <span class="p-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M12 2 4 6v6c0 5 3.4 8.5 8 10 4.6-1.5 8-5 8-10V6Z"/><path d="m9 12 2 2 4-4"/></svg>
-          </span>
-          <div><h3>Delivery you can trust</h3><p>Automated builds, containerised workloads and pipelines that make releases boring.</p></div>
-        </li>
-        <li>
-          <span class="p-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M17 20a5 5 0 0 0-10 0"/><circle cx="12" cy="9" r="3.5"/><path d="M20.5 19a4 4 0 0 0-3-3.6M3.5 19a4 4 0 0 1 3-3.6"/></svg>
-          </span>
-          <div><h3>Leading in the open</h3><p>Technical decisions explained, reviewed and documented — so the team can carry them.</p></div>
-        </li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- ================= EXPERIENCE ================= -->
-<section id="experience" class="section section-alt">
-  <div class="wrap">
-    <header class="section-head reveal">
-      <p class="kicker">02 — Experience</p>
-      <h2>Where I've built things.</h2>
-    </header>
-
-    <ol class="timeline">
-      <li class="tl-item reveal">
-        <div class="tl-dot" aria-hidden="true"></div>
-        <div class="tl-card">
-          <div class="tl-head">
-            <div>
-              <h3>Lead Software Engineer <span class="at">· Vodafone</span></h3>
-              <p class="tl-org">Hexa Consulting · Lisbon, Portugal · Hybrid</p>
-            </div>
-            <p class="tl-date"><span class="now">Now</span> Dec 2025 — Present</p>
-          </div>
-          <p class="tl-summary">
-            Enterprise telecommunications network planning platform, with responsibility across application
-            development, integrations, architecture and software delivery.
-          </p>
-          <ul class="tl-list">
-            <li>Design and evolve .NET backend services and APIs using C# and .NET.</li>
-            <li>Apply DDD and maintainable architecture patterns to complex telecommunications domains.</li>
-            <li>Design integrations and asynchronous workflows using REST APIs, RabbitMQ and background services.</li>
-            <li>Work across persistence and data-access layers using MySQL, EF Core and Dapper.</li>
-            <li>Support architectural and technical decisions across interconnected services and applications.</li>
-            <li>Build and maintain containerised workloads using Docker and Kubernetes.</li>
-            <li>Develop CI/CD workflows with GitHub Actions and Azure DevOps across dev, staging and production.</li>
-            <li>Contribute to engineering modernisation, including source-control and CI/CD migration from Azure DevOps to GitHub.</li>
-            <li>Diagnose and resolve issues across application, database, messaging and infrastructure layers.</li>
-          </ul>
-          <ul class="chips">
-            <li>C#</li><li>.NET</li><li>DDD</li><li>RabbitMQ</li><li>EF Core</li><li>Dapper</li><li>MySQL</li><li>Docker</li><li>Kubernetes</li><li>GitHub Actions</li>
-          </ul>
+        <div class="work-grid">
+          <article class="work">
+            <h3>Network planning platform</h3>
+            <p>.NET services, asynchronous workflows and integrations across a complex, interconnected telecoms estate.</p>
+            <p class="work-tag">Vodafone</p>
+          </article>
+          <article class="work">
+            <h3>NATO agency platform</h3>
+            <p>Feature delivery, performance, security and reliability work on a long-lived internal .NET application.</p>
+            <p class="work-tag">NSPA</p>
+          </article>
+          <article class="work">
+            <h3>Procurement &amp; eTendering</h3>
+            <p>Supplier communication, offer evaluation and order management, for enterprises and public bodies.</p>
+            <p class="work-tag">PwC · Vortal</p>
+          </article>
+          <article class="work">
+            <h3>National gas network</h3>
+            <p>Built from scratch on .NET 6 and Oracle to monitor and manage Portugal's gas network.</p>
+            <p class="work-tag">REN</p>
+          </article>
         </div>
-      </li>
+      </section>
 
-      <li class="tl-item reveal">
-        <div class="tl-dot" aria-hidden="true"></div>
-        <div class="tl-card">
-          <div class="tl-head">
-            <div>
-              <h3>Software Engineer <span class="at">· NATO Support and Procurement Agency</span></h3>
-              <p class="tl-org">Edda Luxembourg &amp; Sogeti Luxembourg · Luxembourg</p>
-            </div>
-            <p class="tl-date">Jul 2024 — Jun 2025</p>
-          </div>
-          <p class="tl-summary">
-            Full-stack engineer on an internal NSPA enterprise platform, maintaining and extending an existing
-            .NET application.
-          </p>
-          <ul class="tl-list">
-            <li>Developed backend and frontend functionality using C#, .NET Framework, ASP.NET MVC, TypeScript and Knockout.js.</li>
-            <li>Delivered new features, bug fixes and database changes.</li>
-            <li>Contributed to performance, security, reliability and refactoring improvements.</li>
-            <li>Participated in technical decisions, estimations and code reviews.</li>
-            <li>Worked directly with testers and business analysts throughout the development lifecycle.</li>
-            <li>Used Azure DevOps for source control and development workflows.</li>
-          </ul>
-          <ul class="chips">
-            <li>C#</li><li>.NET Framework</li><li>ASP.NET MVC</li><li>TypeScript</li><li>Knockout.js</li><li>Azure DevOps</li>
-          </ul>
-        </div>
-      </li>
-
-      <li class="tl-item reveal">
-        <div class="tl-dot" aria-hidden="true"></div>
-        <div class="tl-card">
-          <div class="tl-head">
-            <div>
-              <h3>Software Engineer <span class="at">· PwC</span></h3>
-              <p class="tl-org">IT People Innovation · Portugal</p>
-            </div>
-            <p class="tl-date">Jul 2023 — Aug 2024</p>
-          </div>
-          <p class="tl-summary">
-            Full-stack developer on a comprehensive purchasing platform designed to streamline and optimise
-            procurement processes.
-          </p>
-          <ul class="tl-list">
-            <li>Built a centralised hub allowing the client to communicate purchasing needs to multiple suppliers simultaneously.</li>
-            <li>Implemented offer reception and evaluation flows, plus order management from initiation to delivery.</li>
-            <li>Delivered features end to end with React on the frontend and .NET services behind it.</li>
-          </ul>
-          <ul class="chips">
-            <li>C#</li><li>.NET</li><li>React.js</li><li>REST APIs</li><li>Agile</li>
-          </ul>
-        </div>
-      </li>
-
-      <li class="tl-item reveal">
-        <div class="tl-dot" aria-hidden="true"></div>
-        <div class="tl-card">
-          <div class="tl-head">
-            <div>
-              <h3>Software Engineer <span class="at">· REN</span></h3>
-              <p class="tl-org">Capgemini · Lisbon, Portugal · Remote</p>
-            </div>
-            <p class="tl-date">Jan 2023 — Jun 2023</p>
-          </div>
-          <p class="tl-summary">
-            Full-stack developer on a custom platform for managing Portugal's national gas network, built from
-            the ground up.
-          </p>
-          <ul class="tl-list">
-            <li>Developed the platform with .NET 6 MVC and Web API, backed by Oracle.</li>
-            <li>Delivered tooling to monitor and manage gas network performance across the country.</li>
-            <li>Worked under Agile methodologies with Azure DevOps Server.</li>
-          </ul>
-          <ul class="chips">
-            <li>.NET 6</li><li>ASP.NET Web API</li><li>MVC</li><li>Oracle</li><li>Azure DevOps</li>
-          </ul>
-        </div>
-      </li>
-
-      <li class="tl-item reveal">
-        <div class="tl-dot" aria-hidden="true"></div>
-        <div class="tl-card">
-          <div class="tl-head">
-            <div>
-              <h3>Software Developer <span class="at">· Vortal</span></h3>
-              <p class="tl-org">NEX T Engineering · Lisbon, Portugal · Hybrid</p>
-            </div>
-            <p class="tl-date">Apr 2022 — Dec 2022</p>
-          </div>
-          <p class="tl-summary">
-            Development and ongoing maintenance of an eTendering platform serving companies worldwide,
-            including the Portuguese government.
-          </p>
-          <ul class="tl-list">
-            <li>Worked across a .NET Framework backend with React and Redux on the frontend.</li>
-            <li>Built and maintained features on SQL Server, with xUnit for unit testing.</li>
-            <li>Contributed to a platform that changes how procurement and tendering are conducted online.</li>
-          </ul>
-          <ul class="chips">
-            <li>.NET Framework</li><li>React</li><li>Redux</li><li>SQL Server</li><li>xUnit</li><li>Azure DevOps</li>
-          </ul>
-        </div>
-      </li>
-    </ol>
-  </div>
-</section>
-
-<!-- ================= SKILLS ================= -->
-<section id="skills" class="section">
-  <div class="wrap">
-    <header class="section-head reveal">
-      <p class="kicker">03 — Skills</p>
-      <h2>The toolbox.</h2>
-      <p class="section-sub">
-        Grouped by what they actually are — languages, the things built with them, and the tooling
-        around them. The two leading items in each group are where most of my day goes.
-      </p>
-    </header>
-
-    <div class="skills-grid">
-      <article class="skill-card reveal">
-        <h3>
-          <span class="s-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="m8 7-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg>
-          </span>
-          Languages
-        </h3>
-        <ul class="chips lg">
-          <li class="core">C#</li><li class="core">SQL</li><li>TypeScript</li><li>JavaScript</li><li>Python</li>
-        </ul>
-      </article>
-
-      <article class="skill-card reveal">
-        <h3>
-          <span class="s-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="7" rx="2"/><rect x="3" y="13" width="18" height="7" rx="2"/><path d="M7 7.5h.01M7 16.5h.01"/></svg>
-          </span>
-          Backend &amp; APIs
-        </h3>
-        <ul class="chips lg">
-          <li class="core">.NET / .NET Core</li><li class="core">ASP.NET Core</li><li>.NET Framework</li><li>ASP.NET MVC</li><li>REST APIs</li><li>RabbitMQ</li><li>Background services</li>
-        </ul>
-      </article>
-
-      <article class="skill-card reveal">
-        <h3>
-          <span class="s-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="2.5"/><circle cx="5" cy="19" r="2.5"/><circle cx="19" cy="19" r="2.5"/><path d="M12 7.5v4M12 11.5H5.5v5M12 11.5h6.5v5"/></svg>
-          </span>
-          Architecture
-        </h3>
-        <ul class="chips lg">
-          <li class="core">Microservices</li><li class="core">Domain-Driven Design</li><li>Clean Architecture</li><li>System integration</li><li>Legacy modernisation</li>
-        </ul>
-      </article>
-
-      <article class="skill-card reveal">
-        <h3>
-          <span class="s-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v6c0 1.7 3.6 3 8 3s8-1.3 8-3V6M4 12v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg>
-          </span>
-          Data
-        </h3>
-        <ul class="chips lg">
-          <li class="core">SQL Server</li><li class="core">MySQL</li><li>Oracle</li><li>EF Core</li><li>Dapper</li>
-        </ul>
-      </article>
-
-      <article class="skill-card reveal">
-        <h3>
-          <span class="s-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M6.5 6.5h.01M9.5 6.5h.01"/></svg>
-          </span>
-          Frontend
-        </h3>
-        <ul class="chips lg">
-          <li class="core">React</li><li class="core">Redux</li><li>Knockout.js</li><li>HTML &amp; CSS</li>
-        </ul>
-      </article>
-
-      <article class="skill-card reveal">
-        <h3>
-          <span class="s-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M12 2.8 20 7v10l-8 4.2L4 17V7Z"/><path d="m4 7 8 4.2L20 7M12 11.2V21"/></svg>
-          </span>
-          Delivery &amp; tooling
-        </h3>
-        <ul class="chips lg">
-          <li class="core">Docker</li><li class="core">Kubernetes</li><li>GitHub Actions</li><li>Azure DevOps</li><li>Git</li><li>xUnit</li><li>CI/CD</li>
-        </ul>
-      </article>
-    </div>
-
-    <div class="ways reveal">
-      <h3 class="col-title">Ways of working</h3>
-      <ul class="chips lg">
-        <li>Technical leadership</li><li>Code review</li><li>Mentoring</li><li>Estimation</li><li>Agile / Scrum</li><li>Stakeholder communication</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- ================= DOMAINS ================= -->
-<section id="domains" class="section section-alt">
-  <div class="wrap">
-    <header class="section-head reveal">
-      <p class="kicker">04 — Domains</p>
-      <h2>Business-critical platforms, across industries.</h2>
-      <p class="section-sub">
-        Most of my work lives behind corporate logins, so there is no public demo — but this is the kind of
-        system I build.
-      </p>
-    </header>
-
-    <div class="domain-grid">
-      <article class="domain-card reveal">
-        <span class="d-num" aria-hidden="true">01</span>
-        <h3>Telecommunications</h3>
-        <p>Network planning platform for a major operator: .NET services, asynchronous workflows and integrations across a complex, interconnected estate.</p>
-        <p class="d-tag">Vodafone</p>
-      </article>
-      <article class="domain-card reveal">
-        <span class="d-num" aria-hidden="true">02</span>
-        <h3>International organisations</h3>
-        <p>Internal enterprise platform for a NATO agency — feature delivery, performance, security and reliability work on a long-lived .NET application.</p>
-        <p class="d-tag">NSPA</p>
-      </article>
-      <article class="domain-card reveal">
-        <span class="d-num" aria-hidden="true">03</span>
-        <h3>Procurement &amp; eTendering</h3>
-        <p>Purchasing and tendering platforms used by enterprises and public bodies: supplier communication, offer evaluation and order management end to end.</p>
-        <p class="d-tag">PwC · Vortal</p>
-      </article>
-      <article class="domain-card reveal">
-        <span class="d-num" aria-hidden="true">04</span>
-        <h3>Energy &amp; public infrastructure</h3>
-        <p>A platform built from scratch to monitor and manage Portugal's national gas network, on .NET 6 and Oracle.</p>
-        <p class="d-tag">REN</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ================= EDUCATION ================= -->
-<section id="education" class="section">
-  <div class="wrap">
-    <header class="section-head reveal">
-      <p class="kicker">05 — Education &amp; Certifications</p>
-      <h2>Foundations.</h2>
-    </header>
-
-    <div class="edu-grid">
-      <div class="edu-col reveal">
-        <h3 class="col-title">Education</h3>
+      <!-- ---- Education ---- -->
+      <section class="block">
+        <h2 class="rule-heading">Education</h2>
         <ul class="edu-list">
           <li>
-            <p class="edu-date">2017 — 2021</p>
-            <h4>Licentiate degree, Digital Games Programming</h4>
-            <p class="edu-org">Universidade Lusófona — Centro Universitário de Lisboa</p>
+            <div class="edu-head">
+              <h3>Licentiate degree, Digital Games Programming</h3>
+              <p class="job-date">2017 — 2021</p>
+            </div>
+            <p class="job-meta">Universidade Lusófona — Centro Universitário de Lisboa</p>
           </li>
           <li>
-            <p class="edu-date">2014 — 2017</p>
-            <h4>Level 4, Programming and Management of Computer Systems</h4>
-            <p class="edu-org">Escola Secundária Rainha Dona Leonor</p>
+            <div class="edu-head">
+              <h3>Level 4, Programming and Management of Computer Systems</h3>
+              <p class="job-date">2014 — 2017</p>
+            </div>
+            <p class="job-meta">Escola Secundária Rainha Dona Leonor</p>
           </li>
         </ul>
-      </div>
+      </section>
 
-      <div class="edu-col reveal">
-        <h3 class="col-title">Certifications</h3>
-        <ul class="edu-list">
-          <li>
-            <p class="edu-date">Mar 2022</p>
-            <h4>Data Science Engineering</h4>
-            <p class="edu-org">Instituto Superior Técnico</p>
-          </li>
-          <li>
-            <p class="edu-date">Jan 2022</p>
-            <h4>ASP.NET MVC Core</h4>
-            <p class="edu-org">Rumos</p>
-          </li>
+      <!-- ---- Earlier work ---- -->
+      <section class="block earlier">
+        <h2 class="rule-heading">Earlier work — game development</h2>
+        <p class="block-note">
+          Before enterprise software I studied and shipped games; one project was covered by the Portuguese press.
+        </p>
+        <ul class="game-list">
+          <li><a href="https://hotbrewgames.github.io/geiger.html" target="_blank" rel="noopener noreferrer">
+            <img src="assets/img/work/geigers-ticking.png" alt="" width="160" height="90" decoding="async" />
+            <span><strong>Geiger's Ticking</strong>Survival horror set after Chernobyl</span>
+          </a></li>
+          <li><a href="https://hotbrewgames.github.io/occams.html" target="_blank" rel="noopener noreferrer">
+            <img src="assets/img/work/occams-blade.jpg" alt="" width="160" height="90" decoding="async" />
+            <span><strong>Occam's Blade</strong>Action adventure</span>
+          </a></li>
+          <li><a href="https://hotbrewgames.github.io/enantio.html" target="_blank" rel="noopener noreferrer">
+            <img src="assets/img/work/enantio.jpg" alt="" width="160" height="90" decoding="async" />
+            <span><strong>Enantio</strong>Fantasy adventure</span>
+          </a></li>
+          <li><a href="https://hotbrewgames.github.io/astroT.html" target="_blank" rel="noopener noreferrer">
+            <img src="assets/img/work/astrotraveller.png" alt="" width="160" height="90" decoding="async" />
+            <span><strong>AstroTraveller</strong>Space platformer</span>
+          </a></li>
         </ul>
-      </div>
-    </div>
+        <p class="press">
+          Press:
+          <a href="https://www.msn.com/pt-pt/noticias/ciencia-e-tecnologia/geigers-ticking-o-jogo-sobre-o-desastre-de-chernobyl-criado-por-alunos-finalistas-da-lus%C3%B3fona/ar-BB14yQdF" target="_blank" rel="noopener noreferrer">MSN</a>,
+          <a href="https://www.pcguia.pt/2020/05/geigers-ticking-o-jogo-sobre-o-desastre-de-chernobyl-criado-por-alunos-finalistas-da-lusofona/" target="_blank" rel="noopener noreferrer">PCGuia</a>,
+          <a href="https://www.gamehub.pt/desenvolvimento-de-geigers-ticking-e-anunciado-e-revela-ser-radioactivamente-assustador/" target="_blank" rel="noopener noreferrer">GameHub</a>
+        </p>
+      </section>
 
-    <!-- Earlier work -->
-    <div class="earlier reveal">
-      <h3 class="col-title">Earlier work — game development</h3>
-      <p class="earlier-note">
-        Before moving into enterprise software I studied and shipped games. Some of that work still lives online,
-        including a project covered by the Portuguese press.
-      </p>
-      <ul class="game-grid">
-        <li>
-          <a href="https://hotbrewgames.github.io/geiger.html" target="_blank" rel="noopener noreferrer">
-            <img src="assets/img/work/geigers-ticking.png" alt="Geiger's Ticking logo" loading="lazy" width="320" height="180" />
-            <span class="g-name">Geiger's Ticking</span>
-            <span class="g-desc">Survival horror set after the Chernobyl disaster.</span>
-          </a>
-        </li>
-        <li>
-          <a href="https://hotbrewgames.github.io/occams.html" target="_blank" rel="noopener noreferrer">
-            <img src="assets/img/work/occams-blade.jpg" alt="Occam's Blade logo" loading="lazy" width="320" height="180" />
-            <span class="g-name">Occam's Blade</span>
-            <span class="g-desc">Action adventure — the last survivor of a burned village.</span>
-          </a>
-        </li>
-        <li>
-          <a href="https://hotbrewgames.github.io/enantio.html" target="_blank" rel="noopener noreferrer">
-            <img src="assets/img/work/enantio.jpg" alt="Enantio logo" loading="lazy" width="320" height="180" />
-            <span class="g-name">Enantio</span>
-            <span class="g-desc">A world of magic corrupted by a dark crystal.</span>
-          </a>
-        </li>
-        <li>
-          <a href="https://hotbrewgames.github.io/astroT.html" target="_blank" rel="noopener noreferrer">
-            <img src="assets/img/work/astrotraveller.png" alt="AstroTraveller logo" loading="lazy" width="320" height="180" />
-            <span class="g-name">AstroTraveller</span>
-            <span class="g-desc">Space platformer about jumping between worlds.</span>
-          </a>
-        </li>
-      </ul>
-      <p class="press">
-        Press: 
-        <a href="https://www.msn.com/pt-pt/noticias/ciencia-e-tecnologia/geigers-ticking-o-jogo-sobre-o-desastre-de-chernobyl-criado-por-alunos-finalistas-da-lus%C3%B3fona/ar-BB14yQdF" target="_blank" rel="noopener noreferrer">MSN</a>,
-        <a href="https://www.pcguia.pt/2020/05/geigers-ticking-o-jogo-sobre-o-desastre-de-chernobyl-criado-por-alunos-finalistas-da-lusofona/" target="_blank" rel="noopener noreferrer">PCGuia</a>,
-        <a href="https://www.gamehub.pt/desenvolvimento-de-geigers-ticking-e-anunciado-e-revela-ser-radioactivamente-assustador/" target="_blank" rel="noopener noreferrer">GameHub</a>
-      </p>
-    </div>
   </div>
-</section>
 
-<!-- ================= CONTACT ================= -->
-<section id="contact" class="section section-contact">
-  <div class="wrap">
-    <div class="contact-box reveal">
-      <p class="kicker">06 — Contact</p>
-      <h2>Let's work together.</h2>
-      <p class="contact-lede">
-        Always happy to talk about backend engineering, distributed systems and software architecture —
-        a platform to build, a legacy .NET estate to modernise, or a team to lead.
-      </p>
-      <div class="cta-row center">
-        <a class="btn btn-primary" href="https://www.linkedin.com/in/diogo-maia-63551a196/" target="_blank" rel="noopener noreferrer">
-          <svg viewBox="0 0 24 24" class="filled" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.6 4.78 6V21h-4v-5.5c0-1.3-.02-3-1.85-3-1.86 0-2.14 1.43-2.14 2.9V21H9z"/></svg>
-          Message me on LinkedIn
-        </a>
-        <a class="btn btn-ghost" href="https://github.com/Diogo-Maia" target="_blank" rel="noopener noreferrer">
-          <svg viewBox="0 0 24 24" class="filled" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48l-.01-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.36 1.09 2.94.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03a9.5 9.5 0 0 1 5 0c1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.94.36.31.68.92.68 1.86l-.01 2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
-          GitHub profile
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-</main>
+  <footer class="sheet-foot">
+    <p>Diogo Maia · Lead Software Engineer · Lisbon, Portugal</p>
+    <p class="foot-link"><a href="https://diogo-maia.github.io">diogo-maia.github.io</a></p>
+  </footer>
 
-<!-- ================= FOOTER ================= -->
-<footer class="site-footer">
-  <div class="wrap footer-inner">
-    <p class="f-brand"><span class="brand-mark small" aria-hidden="true">DM</span> Diogo Maia — Lead Software Engineer</p>
-    <nav class="f-links" aria-label="Footer">
-      <a href="https://www.linkedin.com/in/diogo-maia-63551a196/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      <a href="https://github.com/Diogo-Maia" target="_blank" rel="noopener noreferrer">GitHub</a>
-      <a href="#top">Back to top</a>
-    </nav>
-    <p class="f-copy">&copy; <span id="year">2026</span> Diogo Maia · Lisbon, Portugal</p>
-  </div>
-</footer>
+</article>
 
 <script src="assets/js/main.js" defer></script>
 </body>
