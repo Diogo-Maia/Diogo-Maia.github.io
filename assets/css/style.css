@@ -229,13 +229,15 @@ svg.filled { fill: currentColor; stroke: none; }
   font-weight: 800;
   letter-spacing: -.045em;
   /* background-clip:text paints the gradient only inside the element box, so
-     any glyph reaching past it is simply not drawn. A tight line-height was
-     cutting the cap height off "D"/"M" and the descender off "g"; the box now
-     has room for the whole glyph, and the trailing padding covers the last
-     letter, whose advance the negative tracking pulls in. */
+     any glyph reaching past it is simply not drawn. Plus Jakarta Sans declares
+     a descent of .22em and its "g" inks to exactly .22em, so the descender
+     lands flush against the box edge and gets shaved no matter what the
+     line-height is. Only explicit padding clears it. The right padding covers
+     the last letter, whose advance the negative tracking pulls inward; the
+     negative margin gives the added space back to the layout. */
   line-height: 1.06;
-  padding-block: .1em;
-  padding-right: .06em;
+  padding: .06em .06em .24em 0;
+  margin-bottom: -.2em;
   background: linear-gradient(160deg, var(--ink) 30%, color-mix(in srgb, var(--ink) 55%, transparent));
   -webkit-background-clip: text; background-clip: text; color: transparent;
 }
@@ -249,6 +251,8 @@ svg.filled { fill: currentColor; stroke: none; }
 }
 .hero-role em {
   font-style: normal;
+  /* inline padding extends the painted box without moving the line */
+  padding-bottom: .16em;
   background: linear-gradient(100deg, var(--accent), var(--accent-2));
   -webkit-background-clip: text; background-clip: text; color: transparent;
 }
