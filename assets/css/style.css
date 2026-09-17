@@ -224,16 +224,23 @@ svg.filled { fill: currentColor; stroke: none; }
 }
 
 .hero-name {
-  margin-top: 26px;
+  margin-top: 18px;
   font-size: clamp(3rem, 9vw, 6.2rem);
   font-weight: 800;
   letter-spacing: -.045em;
-  line-height: .98;
+  /* background-clip:text paints the gradient only inside the element box, so
+     any glyph reaching past it is simply not drawn. A tight line-height was
+     cutting the cap height off "D"/"M" and the descender off "g"; the box now
+     has room for the whole glyph, and the trailing padding covers the last
+     letter, whose advance the negative tracking pulls in. */
+  line-height: 1.06;
+  padding-block: .1em;
+  padding-right: .06em;
   background: linear-gradient(160deg, var(--ink) 30%, color-mix(in srgb, var(--ink) 55%, transparent));
   -webkit-background-clip: text; background-clip: text; color: transparent;
 }
 .hero-role {
-  margin-top: 20px;
+  margin-top: 12px;
   max-width: 24ch;
   font-family: var(--display);
   font-size: clamp(1.35rem, 3.2vw, 2.1rem);
